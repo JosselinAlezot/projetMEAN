@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersServiceService } from '../users-service.service';
 
 
 @Component({
@@ -12,10 +13,13 @@ export class AuthComponentComponent implements OnInit {
 	private login: string;
 	private pass: string;
 	private isLoggedIn: boolean = false;
+	private users: Object[];
 
-	constructor() { }
+	constructor(private research: UsersServiceService) { }
 
 	ngOnInit() {
+		this.research.getUsers().subscribe(res => this.users = res);
+		console.log(this.users);
 	}
 
 	onSubmit(){

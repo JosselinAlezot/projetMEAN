@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http'; 
 import { FormsModule } from '@angular/forms';
 
 import { UsersModule } from './users/users.module';
@@ -17,7 +17,8 @@ import { GoodsModule } from './goods/goods.module';
     AppRoutingModule,
     FormsModule, 
     GoodsModule,
-    UsersModule
+    UsersModule,
+    HttpClientModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
