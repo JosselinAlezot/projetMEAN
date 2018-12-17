@@ -3,7 +3,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
 
-
+import { UsersModule } from './users/users.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GoodsModule } from './goods/goods.module';
@@ -16,7 +16,8 @@ import { GoodsModule } from './goods/goods.module';
     BrowserModule,
     AppRoutingModule,
     FormsModule, 
-    GoodsModule
+    GoodsModule,
+    UsersModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
