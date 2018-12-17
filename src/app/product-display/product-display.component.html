@@ -1,0 +1,15 @@
+<p>
+Biens disponibles
+</p>
+<table>
+	<tr>
+		<td>
+			<ul>
+				<li *ngFor="let good of goods">
+					Nom du bien: {{good.nom}}
+					Prix neuf: {{good.prixNeuf}}
+				</li>
+			</ul>
+		</td>
+	</tr>
+</table>
