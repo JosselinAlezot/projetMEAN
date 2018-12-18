@@ -1,6 +1,6 @@
 <div>
   Voici la liste des biens :
   <ul>    
-    <li *ngFor="let good of goods"> {{good.nom}} </li>
+    <li *ngFor="let good of goods"> {{good.nom}} Prix : {{good.prixNeuf}} Type : {{good.type}}<button (click)="deleteGood(good.idBien)"> Delete </button></li> 
   </ul>
 </div>
