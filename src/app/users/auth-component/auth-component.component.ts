@@ -32,11 +32,6 @@ export class AuthComponentComponent implements OnInit {
 		}
 	}
 
-	testUser(){
-		console.log(this.users);
-		console.log(this.login);
-	}
-
 	logout(){
 		this.isLoggedIn = false;
 		this.failedConnection = false;

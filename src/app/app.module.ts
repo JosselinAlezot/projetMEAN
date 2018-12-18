@@ -7,6 +7,7 @@ import { UsersModule } from './users/users.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GoodsModule } from './goods/goods.module';
+import { ServicesModule } from './services/services.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { GoodsModule } from './goods/goods.module';
     FormsModule, 
     GoodsModule,
     UsersModule,
-    HttpClientModule
+    HttpClientModule,
+    ServicesModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

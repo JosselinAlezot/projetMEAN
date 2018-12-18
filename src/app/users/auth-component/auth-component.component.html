@@ -1,8 +1,7 @@
 <div>
   Voici la liste des users :
   <ul>    
-    <li *ngFor="let user of users"> {{user.mail}} </li>
-    uuu
+    <li *ngFor="let user of users"> {{user.nom}} </li>
   </ul>
 </div>
 
@@ -26,5 +25,4 @@
 	{{login}} est connecté !
 	<br/><br/>
 	<button (click)="logout()"> Deconnexion </button>
-	<button (click)="testUser()"> testUser </button>
 </div>

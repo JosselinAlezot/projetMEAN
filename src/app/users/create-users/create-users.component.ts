@@ -14,8 +14,8 @@ export class CreateUsersComponent implements OnInit {
 	nom:string="";
 	prenom:string="";
 	ville:string="";
-	adresse="";
-	telephone="";
+	adresse:string="";
+	telephone:string="";
 	isLoadingResults = false;
 
 	constructor(private users: UsersServiceService, private formBuilder: FormBuilder) { }
