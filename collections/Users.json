@@ -1,0 +1,28 @@
+[{
+		"mail": "gtronel@outlook.fr",
+		"MDP": "12345",
+		"nom": "Tronel",
+		"prenom": "Gaétan",
+		"ville": "Montpellier",
+		"adresse": "ici",
+		"telephone": "06xxxxxxxx"
+	},
+	{
+		"mail": "ghelgze@outlook.fr",
+		"MDP": "123456",
+		"nom": "Nom1",
+		"prenom": "Prenom1",
+		"ville": "Lyon",
+		"adresse": "là-bas",
+		"telephone": "06xxxxxxx2"
+	},
+	{
+		"mail": "test@outlook.fr",
+		"MDP": "123456",
+		"nom": "test1",
+		"prenom": "2",
+		"ville": "Montpellier",
+		"adresse": "pas là",
+		"telephone": "06xx4xxxx2"
+	}
+]

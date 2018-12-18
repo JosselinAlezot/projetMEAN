@@ -1,0 +1,10 @@
+[
+{"idDisponibilite" : 1, "idBien" : 1, "jourMatin" : "Lundi,Jeudi,Samedi", "jourAprem" : "Mardi,Jeudi,Samedi,Dimanche"},
+{"idDisponibilite" : 2, "idBien" : 2, "jourMatin" : "Lundi,Samedi", "jourAprem" : "Mardi,Mercredi,Jeudi,Samedi,Dimanche"},
+{"idDisponibilite" : 3, "idBien" : 3, "jourMatin" : "Samedi", "jourAprem" : "Mardi,Dimanche"},
+{"idDisponibilite" : 4, "idBien" : 4, "jourMatin" : "Mardi,Jeudi,Samedi", "jourAprem" : "Mardi, Jeudi"},
+{"idDisponibilite" : 5, "idService" : 1, "jourMatin" : "Lundi,Jeudi,Samedi", "jourAprem" : "Samedi,Dimanche"},
+{"idDisponibilite" : 6, "idService" : 2, "jourMatin" : "Samedi,Dimanche", "jourAprem" : "Mardi,Mercredu,Jeudi,Samedi,Dimanche"},
+{"idDisponibilite" : 7, "idService" : 3, "jourMatin" : "Jeudi,Vendredi", "jourAprem" : "Jeudi,Samedi,Dimanche"},
+{"idDisponibilite" : 8, "idService" : 4, "jourMatin" : "Lundi,Mardi, Vendredi", "jourAprem" : "Mardi,Dimanche"}
+]

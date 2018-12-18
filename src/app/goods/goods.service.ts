@@ -14,7 +14,6 @@ export class GoodsService {
   getGoods(): Observable<any> {
      let observable: Observable<any>;
      observable =  this.http.get("http://localhost:8888/biens/prix/1", {headers: {"Access-Control-Allow-Origin": "*"}});
-     console.log(observable);
      return observable;
   }
 }

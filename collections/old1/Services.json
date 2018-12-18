@@ -1,0 +1,29 @@
+[{
+		"idService": 1,
+		"nom": "Cours de maths",
+		"descriptif": "Cours de maths niveau collège ou lycée",
+		"prix": 10,
+		"type": "Apprentissage"
+	},
+	{
+		"idService": 2,
+		"nom": "Cours d'informatique",
+		"descriptif": "Cours de programmation ou de base de données tout niveaux",
+		"prix": 15,
+		"type": "Apprentissage"
+	},
+	{
+		"idService": 3,
+		"nom": "Cours de patisserie",
+		"descriptif": "Apprentissage sur un type de dessert particulier chaque semaine",
+		"prix": 10,
+		"type": "Apprentissage"
+	},
+	{
+		"idService": 4,
+		"nom": "Femme de ménage",
+		"descriptif": "A disposition pour laver tous types de logement",
+		"prix": 10,
+		"type": "Menage"
+	}
+]

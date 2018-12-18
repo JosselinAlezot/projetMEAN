@@ -1,0 +1,19 @@
+[{
+		"idUtilisation": 1,
+		"email": "gtronel@outlook.fr",
+		"idBien": 1,
+		"date": "12/04/18"
+	},
+	{
+		"idUtilisation": 2,
+		"email": "ghelgze@outlook.fr",
+		"idBien": 3,
+		"date": "17/11/08"
+	},
+	{
+		"idUtilisation": 3,
+		"email": "test@outlook.fr",
+		"idService": 2,
+		"date": "10/11/18"
+	}
+]

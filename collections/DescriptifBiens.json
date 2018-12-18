@@ -1,0 +1,17 @@
+[{
+		"idBien": 1,
+		"motClef": "menage"
+	},
+	{
+		"idBien": 2,
+		"motClef": "cuisine"
+	},
+	{
+		"idBien": 3,
+		"motClef": "automobile"
+	},
+	{
+		"idBien": 4,
+		"motClef": "bricolage"
+	}
+]

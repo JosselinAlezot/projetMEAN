@@ -1,3 +1,13 @@
+<div>
+  Voici la liste des users :
+  <ul>    
+    <li *ngFor="let user of users"> {{user.mail}} </li>
+    uuu
+  </ul>
+</div>
+
+
+
 <form *ngIf="!isLoggedIn" (ngSubmit)="onSubmit()" #loginForm="ngForm">
 	<div class="form-group">
 		<label for="login"> Login </label>
@@ -8,9 +18,13 @@
 		<input type="password" class="form-control" id="pass" required placeholder="Mot de passe" [(ngModel)]="pass" name="pass" />
 	</div>
 	<button type="submit"> Submit </button>
+	<div *ngIf="failedConnection">
+		Ces identifiants ne sont pas reconnus par nos services. Veuillez réésayez.
+	</div>
 </form>
 <div *ngIf="isLoggedIn">
 	{{login}} est connecté !
 	<br/><br/>
 	<button (click)="logout()"> Deconnexion </button>
+	<button (click)="testUser()"> testUser </button>
 </div>

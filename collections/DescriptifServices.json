@@ -1,0 +1,21 @@
+[{
+		"idService": 1,
+		"motClef": "apprentissage"
+	},
+	{
+		"idService": 2,
+		"motClef": "apprentissage"
+	},
+	{
+		"idService": 3,
+		"motClef": "cuisine"
+	},
+	{
+		"idService": 3,
+		"motClef": "apprentissage"
+	},
+	{
+		"idService": 4,
+		"motClef": "menage"
+	}
+]
