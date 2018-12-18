@@ -18,7 +18,6 @@ export class UsersServiceService {
 
 	createUser(mail:string, MDP:string, nom:string, prenom:string, ville:string, adresse:string, telephone:string) {
 		var json = {"mail":mail,"MDP":MDP,"nom":nom,"prenom":prenom,"ville":ville,"adresse":adresse,"telephone": telephone};
-		console.log(json);
 		return this.http.post("http://localhost:8888/users", json);
 	}
 

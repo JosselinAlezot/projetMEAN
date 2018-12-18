@@ -12,7 +12,6 @@ export class ServicesService {
 
 	createService(nom:string, descriptif:string, prix:string, type:string) {
 		var json = {"nom":nom,"descriptif": descriptif,"prix":prix,"type":type};
-		console.log(json);
 		return this.http.post("http://localhost:8888/services", json);
 	}
 
