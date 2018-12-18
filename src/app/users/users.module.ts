@@ -1,15 +1,21 @@
-import { NgModule } from '@angular/core';
+import { NgModule , CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AuthComponentComponent } from './auth-component/auth-component.component';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
+import { CreateUsersComponent } from './create-users/create-users.component';
 
 @NgModule({
-  declarations: [AuthComponentComponent],
+  declarations: [AuthComponentComponent, CreateUsersComponent],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ], 
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA, 
+    NO_ERRORS_SCHEMA
+], 
   exports: [
-  	AuthComponentComponent],
+  	AuthComponentComponent,CreateUsersComponent],
 })
 export class UsersModule { }
