@@ -11,9 +11,8 @@ export class UsersServiceService {
   constructor(private http: HttpClient) { }
 
   getUsers(): Observable<any>{
-  	let url: string = "http://localhost:8888/users";
+  	let url: string = "http://localhost:8888/Users";
   	let observable: Observable<any> = this.http.get(url);
-  	console.log(observable);
   	return observable;
   }
 

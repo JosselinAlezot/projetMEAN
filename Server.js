@@ -209,6 +209,23 @@ MongoClient.connect(url, {useNewUrlParser: true}, (err, client) => {
     })
 
 
+
+        app.post("/biens", (req, res) => {
+    console.log(req.body);
+    for (let prop in req.body) {
+            console.log(prop+" : "+req.body[prop]);
+    }
+    res.setHeader("Content-type", "text/raw");  
+    try {
+            req.body.prixNeuf = parseInt(req.body.prixNeuf);
+            db.collection("biens").insertOne(req.body);
+        res.end("Insertion réussie");       
+    }
+    catch(e) {
+        res.end("Error "+e);
+    }
+    });
+
     //tentative 2 chercher les biens par mot-clés
     app.get("/biens/motsClef/:motsClef", (req, res) => {
         res.setHeader("Content-type", "application/json");
