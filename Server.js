@@ -226,6 +226,20 @@ MongoClient.connect(url, {useNewUrlParser: true}, (err, client) => {
     }
     });
 
+        app.post("/biens/delete", (req, res) => {
+            console.log(req.body);
+            try {
+                console.log("presque réussi");
+                console.log("je suppr"+req.body.idBien);
+                let idBien = parseInt(req.body.idBien);
+                console.log("ok : "+db.collection("biens").find({"idBien": idBien}));
+                db.collection("biens").deleteOne({"idBien": idBien});
+                res.end("Suppression réussie");
+            } catch(e) {
+                res.end("Erreur de suppression"+e);
+            }
+        });
+
     //tentative 2 chercher les biens par mot-clés
     app.get("/biens/motsClef/:motsClef", (req, res) => {
         res.setHeader("Content-type", "application/json");

@@ -64,4 +64,9 @@ private goods:any;
      this.goodsService.getGoods().subscribe(res => this.goods = res);
   }
 
+  deleteGood(id:string) {
+  	console.log("ok youhou");
+  	this.goodsService.deleteGood(id).subscribe(res => this.goods = res);;
+  }
+
 }
