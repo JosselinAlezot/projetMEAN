@@ -2,9 +2,10 @@ import { NgModule , CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/co
 import { CommonModule } from '@angular/common';
 import { CreateServicesComponent } from './create-services/create-services.component';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
+import { ListServicesComponent } from './list-services/list-services.component';
 
 @NgModule({
-  declarations: [CreateServicesComponent],
+  declarations: [CreateServicesComponent, ListServicesComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -15,6 +16,6 @@ import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
     NO_ERRORS_SCHEMA
 ],
 exports: [
-  	CreateServicesComponent],
+  	CreateServicesComponent, ListServicesComponent],
 })
 export class ServicesModule { }

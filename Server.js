@@ -33,6 +33,23 @@ MongoClient.connect(url, {useNewUrlParser: true}, (err, client) => {
         
     });
 
+    app.get("/services", (req, res) => {
+        console.log("route: /services");
+        db.collection("services").find().toArray((err, documents)=> {
+        // la création de json ne sert à rien ici
+        // on pourrait directement renvoyer documents
+        let json = [];
+        for (let doc of documents) {
+            console.log(doc);
+            json.push(doc);
+        }
+        res.setHeader("Access-Control-Allow-Origin", "*");
+        res.setHeader("Content-type", "application/json");
+        res.end(JSON.stringify(json));
+    });
+        
+    });
+
     app.get("/users/:nom", (req, res) => {
         console.log("route: /users/:nom");
         db.collection("users").find({"nom":req.params.nom}).toArray((err, documents)=> {
@@ -208,37 +225,52 @@ MongoClient.connect(url, {useNewUrlParser: true}, (err, client) => {
 
     })
 
-
-
-        app.post("/biens", (req, res) => {
-    console.log(req.body);
-    for (let prop in req.body) {
+    app.post("/services", (req, res) => {
+        console.log(req.body);
+        for (let prop in req.body) {
             console.log(prop+" : "+req.body[prop]);
-    }
-    res.setHeader("Content-type", "text/raw");  
-    try {
-            req.body.prixNeuf = parseInt(req.body.prixNeuf);
-            db.collection("biens").insertOne(req.body);
-        res.end("Insertion réussie");       
-    }
-    catch(e) {
-        res.end("Error "+e);
-    }
+        }
+        res.setHeader("Content-type", "text/raw");  
+        try {
+            req.body.prix = parseInt(req.body.prix);
+            db.collection("services").insertOne(req.body);
+            res.end("Insertion réussie");       
+        }
+        catch(e) {
+            res.end("Error "+e);
+        }
     });
 
-        app.post("/biens/delete", (req, res) => {
-            console.log(req.body);
-            try {
-                console.log("presque réussi");
-                console.log("je suppr"+req.body.idBien);
-                let idBien = parseInt(req.body.idBien);
-                console.log("ok : "+db.collection("biens").find({"idBien": idBien}));
-                db.collection("biens").deleteOne({"idBien": idBien});
-                res.end("Suppression réussie");
-            } catch(e) {
-                res.end("Erreur de suppression"+e);
-            }
-        });
+
+    app.post("/biens", (req, res) => {
+        console.log(req.body);
+        for (let prop in req.body) {
+            console.log(prop+" : "+req.body[prop]);
+        }
+        res.setHeader("Content-type", "text/raw");  
+        try {
+            req.body.prixNeuf = parseInt(req.body.prixNeuf);
+            db.collection("biens").insertOne(req.body);
+            res.end("Insertion réussie");       
+        }
+        catch(e) {
+            res.end("Error "+e);
+        }
+    });
+
+    app.post("/biens/delete", (req, res) => {
+        console.log(req.body);
+        try {
+            console.log("presque réussi");
+            console.log("je suppr"+req.body.idBien);
+            let idBien = parseInt(req.body.idBien);
+            console.log("ok : "+db.collection("biens").find({"idBien": idBien}));
+            db.collection("biens").deleteOne({"idBien": idBien});
+            res.end("Suppression réussie");
+        } catch(e) {
+            res.end("Erreur de suppression"+e);
+        }
+    });
 
     //tentative 2 chercher les biens par mot-clés
     app.get("/biens/motsClef/:motsClef", (req, res) => {

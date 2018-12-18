@@ -16,4 +16,10 @@ export class ServicesService {
 		return this.http.post("http://localhost:8888/services", json);
 	}
 
+	getServices(): Observable<any> {
+     let observable: Observable<any>;
+     observable =  this.http.get("http://localhost:8888/Services");
+     return observable;
+  }
+
 }
