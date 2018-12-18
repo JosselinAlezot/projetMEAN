@@ -11,7 +11,8 @@ import { GoodsComponent } from './goods.component';
   ], 
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
-]
+], 
+  exports: [ ListGoodsComponent ],
 
 })
 export class GoodsModule { }

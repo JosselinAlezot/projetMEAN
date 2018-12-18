@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http'; 
+
 
 import { FormsModule } from '@angular/forms';
 
@@ -14,6 +16,7 @@ import { GoodsModule } from './goods/goods.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule, 
     GoodsModule
