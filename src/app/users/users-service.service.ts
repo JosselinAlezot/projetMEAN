@@ -12,7 +12,7 @@ export class UsersServiceService {
 
   getUsers(): Observable<any>{
   	let url: string = "http://localhost:8888/Users";
-  	let observable: Observable<any> = this.http.get(url).pipe(map((res:Response) => res.json()));
+  	let observable: Observable<any> = this.http.get(url);
   	return observable;
   }
 }

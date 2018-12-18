@@ -8,6 +8,9 @@ import { GoodsService } from '../goods.service';
 })
 export class ListGoodsComponent implements OnInit {
 
+private goods:any;
+
+/*
 	private goods:Object[] = [
 	{
 		"idBien": 1,
@@ -40,8 +43,17 @@ export class ListGoodsComponent implements OnInit {
 		"lienPhoto": "https://media.bricoman.fr/article/0/5/0/8/0/770805-16.jpg",
 		"prixNeuf": 35,
 		"type": "Bricolage"
+	},
+	{
+		"idBien": 6,
+		"nom": "uuuu",
+		"descriptif": "Perceuse presque neuve",
+		"lienPhoto": "https://media.bricoman.fr/article/0/5/0/8/0/770805-16.jpg",
+		"prixNeuf": 35,
+		"type": "Bricolage"
 	}
 	];
+	*/
 
 
 
