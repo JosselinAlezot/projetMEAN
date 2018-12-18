@@ -1,11 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http'; 
-
-
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
-
+import { UsersModule } from './users/users.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GoodsModule } from './goods/goods.module';
@@ -19,7 +17,9 @@ import { GoodsModule } from './goods/goods.module';
     HttpClientModule,
     AppRoutingModule,
     FormsModule, 
-    GoodsModule
+    GoodsModule,
+    UsersModule,
+    HttpClientModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
