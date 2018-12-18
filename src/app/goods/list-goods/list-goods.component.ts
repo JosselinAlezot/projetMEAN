@@ -8,7 +8,7 @@ import { GoodsService } from '../goods.service';
 })
 export class ListGoodsComponent implements OnInit {
 
-	
+
 private goods:any;
 
   constructor(private goodsService: GoodsService) {

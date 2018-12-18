@@ -1,6 +1,19 @@
 <div>
-  Voici la liste des services :
-  <ul>    
-    <li *ngFor="let service of services"> {{service.nom}} </li>
-  </ul>
+	Voici la liste des services :
+	<ul class="service">    
+		<li *ngFor="let service of services">
+			<div>
+				Nom du service: {{service.nom}} 
+			</div> 
+			<div>
+				Descriptif: {{service.descriptif}} 
+			</div> 
+			<div>
+				Prix: {{service.prix}} 
+			</div> 
+			<div>
+				Type: {{service.type}} 
+			</div>  
+		</li>
+	</ul>
 </div>
