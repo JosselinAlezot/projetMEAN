@@ -1,7 +1,13 @@
+<div class="form-group">
+  <label for="type">Choisissez le type de bien : </label>
+  <input type="text" class="form-control" id="type" [(ngModel)]="type" name="type"/>
+</div>
 <div>
-	Voici la liste des biens :
+	Voici la liste des biens de type {{type}}:
 	<ul class="good">    
-		<li *ngFor="let good of goods"> 
+		<ng-container *ngFor="let good of goods"> 
+		<ng-container ng-switch on="good.type"> 
+			<li *ngIf="good.type==type">
 			<div>
 				Nom du bien: {{good.nom}} 
 			</div>
@@ -15,6 +21,8 @@
 			</div>
 			<br/>
 			<button (click)="deleteGood(good.idBien)"> Supprimer </button>
-		</li> 
-	</ul>
-</div>
+		</li>
+		</ng-container> 
+		</ng-container> 
+		</ul>
+	</div>
